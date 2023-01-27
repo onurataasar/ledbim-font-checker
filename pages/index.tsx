@@ -55,7 +55,15 @@ export default function Home() {
                 (text-4xl / 36px)
               </span>
             </h2>
-
+            <h2 className={font.className} style={{ fontSize: "32px" }}>
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
+                : text}
+              <span className="text-sm font-light text-yellow-400">
+                {" "}
+                (text-[32px] / 32px)
+              </span>
+            </h2>
             <h3 className={font.className}>
               {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
               <span className="text-sm font-light text-yellow-400">
