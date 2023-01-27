@@ -6,11 +6,11 @@
   gap: 2rem;
   min-height: 100vh;
   h1 {
-    @apply text-3xl  uppercase text-purple-800 font-semibold;
-    filter: drop-shadow(5px 4px 6px #4444ddb9);
+    @apply text-3xl  uppercase text-violet-100 font-semibold;
+    filter: drop-shadow(5px 3px 4px #7272d8a9);
   }
   .input_container {
-    @apply flex gap-4;
+    @apply flex flex-col md:flex-row gap-4;
   }
 }
 
@@ -29,6 +29,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @apply text-center text-gray-100;
+    word-break: break-word;
     h2 {
       @apply text-4xl;
     }

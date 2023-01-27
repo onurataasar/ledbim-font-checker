@@ -8,10 +8,10 @@ import TextInput from "@/components/TextInput";
 const inter = Inter({ weight: "600", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 const asar = Asar({ weight: "400", subsets: ["latin"] });
-const fonts = ["Inter", "Montserrat", "Asar"];
+const fonts = ["Montserrat", "Inter", "Asar"];
 
 export default function Home() {
-  const [selectedFont, setSelectedFont] = React.useState("Inter");
+  const [selectedFont, setSelectedFont] = React.useState("Montserrat");
   const [font, setFont] = React.useState(inter);
   const [text, setText] = React.useState();
   React.useEffect(() => {
@@ -48,19 +48,29 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.font_wrapper}>
             <h2 className={font.className}>
-              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-4xl)`
+                : text}{" "}
             </h2>
             <h3 className={font.className}>
-              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-2xl)`
+                : text}{" "}
             </h3>
             <h4 className={font.className}>
-              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-xl)`
+                : text}{" "}
             </h4>
             <h5 className={font.className}>
-              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-base)`
+                : text}{" "}
             </h5>
             <h6 className={font.className}>
-              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-sm)`
+                : text}{" "}
             </h6>
           </div>
         </div>
