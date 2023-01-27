@@ -51,7 +51,8 @@ export default function Home() {
               {!text
                 ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
                 : text}{" "}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
+                {" "}
                 (text-4xl / 36px)
               </span>
             </h2>
@@ -59,26 +60,26 @@ export default function Home() {
               {!text
                 ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
                 : text}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
                 {" "}
                 (text-[32px] / 32px)
               </span>
             </h2>
             <h3 className={font.className}>
               {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
                 (text-2xl / 24px)
               </span>
             </h3>
             <h4 className={font.className}>
               {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
                 (text-xl / 20px)
               </span>
             </h4>
             <h5 className={font.className}>
               {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
                 (text-base / 16px)
               </span>
             </h5>
@@ -86,7 +87,7 @@ export default function Home() {
               {!text
                 ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
                 : text}{" "}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
                 {" "}
                 (text-sm / 14px)
               </span>
@@ -95,7 +96,7 @@ export default function Home() {
               {!text
                 ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
                 : text}
-              <span className="text-sm font-light text-yellow-400">
+              <span className="text-sm font-light whitespace-nowrap text-yellow-400">
                 {" "}
                 (text-xs / 12px)
               </span>

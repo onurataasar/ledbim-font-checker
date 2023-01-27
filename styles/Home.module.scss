@@ -5,6 +5,7 @@
   align-items: center;
   gap: 2rem;
   min-height: 100vh;
+  @apply py-12;
   h1 {
     @apply text-3xl  uppercase text-violet-100 font-semibold;
     filter: drop-shadow(5px 3px 4px #7272d8a9);
