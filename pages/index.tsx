@@ -13,9 +13,7 @@ const fonts = ["Inter", "Montserrat", "Asar"];
 export default function Home() {
   const [selectedFont, setSelectedFont] = React.useState("Inter");
   const [font, setFont] = React.useState(inter);
-  const [text, setText] = React.useState(
-    `Ledbim ${selectedFont} ${font.style.fontWeight}`
-  );
+  const [text, setText] = React.useState();
   React.useEffect(() => {
     if (selectedFont === "Inter") {
       setFont(inter);
@@ -45,19 +43,25 @@ export default function Home() {
         <h1 className={inter.className}>Ledbim Font Checker</h1>
         <div className={styles.input_container}>
           <FontSelect fonts={fonts} onChange={(e: any) => handleSelect(e)} />
-          <TextInput
-            onChange={(e: {
-              target: { value: React.SetStateAction<string> };
-            }) => setText(e.target.value)}
-          />
+          <TextInput onChange={(e: any) => setText(e.target.value)} />
         </div>
         <div className={styles.container}>
           <div className={styles.font_wrapper}>
-            <h2 className={font.className}>{text}</h2>
-            <h3 className={font.className}>{text}</h3>
-            <h4 className={font.className}>{text}</h4>
-            <h5 className={font.className}>{text}</h5>
-            <h6 className={font.className}>{text}</h6>
+            <h2 className={font.className}>
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+            </h2>
+            <h3 className={font.className}>
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+            </h3>
+            <h4 className={font.className}>
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+            </h4>
+            <h5 className={font.className}>
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+            </h5>
+            <h6 className={font.className}>
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}
+            </h6>
           </div>
         </div>
       </main>
