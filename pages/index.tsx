@@ -3,6 +3,7 @@ import { Inter, Montserrat, Asar } from "@next/font/google";
 import styles from "@/styles/Home.module.scss";
 import FontSelect from "@/components/FontSelect";
 import React from "react";
+import TextInput from "@/components/TextInput";
 
 const inter = Inter({ weight: "600", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
@@ -12,7 +13,9 @@ const fonts = ["Inter", "Montserrat", "Asar"];
 export default function Home() {
   const [selectedFont, setSelectedFont] = React.useState("Inter");
   const [font, setFont] = React.useState(inter);
-
+  const [text, setText] = React.useState(
+    `Ledbim ${selectedFont} ${font.style.fontWeight}`
+  );
   React.useEffect(() => {
     if (selectedFont === "Inter") {
       setFont(inter);
@@ -40,21 +43,20 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={inter.className}>Ledbim Font Checker</h1>
-        <FontSelect fonts={fonts} onChange={(e: any) => handleSelect(e)} />
+        <div className={styles.input_container}>
+          <FontSelect fonts={fonts} onChange={(e: any) => handleSelect(e)} />
+          <TextInput
+            onChange={(e: {
+              target: { value: React.SetStateAction<string> };
+            }) => setText(e.target.value)}
+          />
+        </div>
         <div className={styles.container}>
           <div className={styles.font_wrapper}>
-            <h2 className={font.className}>
-              Ledbim {selectedFont} {font.style.fontWeight}
-            </h2>
-            <h3 className={font.className}>
-              Ledbim {selectedFont} {font.style.fontWeight}
-            </h3>
-            <h4 className={font.className}>
-              Ledbim {selectedFont} {font.style.fontWeight}
-            </h4>
-            <h5 className={font.className}>
-              Ledbim {selectedFont} {font.style.fontWeight}
-            </h5>
+            <h2 className={font.className}>{text}</h2>
+            <h3 className={font.className}>{text}</h3>
+            <h4 className={font.className}>{text}</h4>
+            <h5 className={font.className}>{text}</h5>
           </div>
         </div>
       </main>

@@ -4,11 +4,11 @@ const FontSelect = ({
   fonts = [],
   onChange,
 }: {
-  fonts?: Array<string>;
+  fonts: Array<string>;
   onChange: any;
 }) => {
   return (
-    <div>
+    <>
       <select className={styles.font_select} onChange={onChange}>
         {fonts.map((font: any, id) => (
           <option className={styles.option} key={id}>
@@ -16,7 +16,7 @@ const FontSelect = ({
           </option>
         ))}
       </select>
-    </div>
+    </>
   );
 };
 
