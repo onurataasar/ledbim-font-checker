@@ -49,28 +49,48 @@ export default function Home() {
           <div className={styles.font_wrapper}>
             <h2 className={font.className}>
               {!text
-                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-4xl)`
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
                 : text}{" "}
+              <span className="text-sm font-light text-yellow-400">
+                (text-4xl / 36px)
+              </span>
             </h2>
+
             <h3 className={font.className}>
-              {!text
-                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-2xl)`
-                : text}{" "}
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
+              <span className="text-sm font-light text-yellow-400">
+                (text-2xl / 24px)
+              </span>
             </h3>
             <h4 className={font.className}>
-              {!text
-                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-xl)`
-                : text}{" "}
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
+              <span className="text-sm font-light text-yellow-400">
+                (text-xl / 20px)
+              </span>
             </h4>
             <h5 className={font.className}>
-              {!text
-                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-base)`
-                : text}{" "}
+              {!text ? `Ledbim ${selectedFont} ${font.style.fontWeight}` : text}{" "}
+              <span className="text-sm font-light text-yellow-400">
+                (text-base / 16px)
+              </span>
             </h5>
             <h6 className={font.className}>
               {!text
-                ? `Ledbim ${selectedFont} ${font.style.fontWeight} (text-sm)`
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
                 : text}{" "}
+              <span className="text-sm font-light text-yellow-400">
+                {" "}
+                (text-sm / 14px)
+              </span>
+            </h6>
+            <h6 className={font.className} style={{ fontSize: "12px" }}>
+              {!text
+                ? `Ledbim ${selectedFont} ${font.style.fontWeight} `
+                : text}
+              <span className="text-sm font-light text-yellow-400">
+                {" "}
+                (text-xs / 12px)
+              </span>
             </h6>
           </div>
         </div>
