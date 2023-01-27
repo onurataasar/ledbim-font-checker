@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2;
+  grid-auto-flow: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  .font_wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
