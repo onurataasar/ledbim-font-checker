@@ -40,12 +40,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={inter.className}>Ledbim Font Checker</h1>
-        <FontSelect
-          fonts={fonts}
-          onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
-            handleSelect(e)
-          }
-        />
+        <FontSelect fonts={fonts} onChange={(e: any) => handleSelect(e)} />
         <div className={styles.container}>
           <div className={styles.font_wrapper}>
             <h2 className={font.className}>

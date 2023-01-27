@@ -1,22 +1,22 @@
 import React from "react";
 import styles from "./styles.module.scss";
 const FontSelect = ({
-  fonts,
+  fonts = [],
   onChange,
 }: {
-  fonts: Array<any>;
+  fonts?: Array<string>;
   onChange: any;
 }) => {
   return (
-    <>
+    <div>
       <select className={styles.font_select} onChange={onChange}>
         {fonts.map((font: any, id) => (
           <option className={styles.option} key={id}>
-            <span>{font}</span>
+            {font}
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 };
 

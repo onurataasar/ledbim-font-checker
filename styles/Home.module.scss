@@ -5,6 +5,9 @@
   align-items: center;
   gap: 2rem;
   min-height: 100vh;
+  h1 {
+    @apply text-2xl text-purple-800;
+  }
 }
 
 .container {
@@ -16,12 +19,23 @@
   align-items: center;
   max-width: 50%;
   .font_wrapper {
-    scale: 150%;
     padding-top: 1rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h2 {
+      @apply text-3xl;
+    }
+    h3 {
+      @apply text-xl;
+    }
+    h4 {
+      @apply text-base;
+    }
+    h5 {
+      @apply text-sm;
+    }
   }
 }

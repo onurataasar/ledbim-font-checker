@@ -1,12 +1,7 @@
 .font_select {
-  padding: 10px;
-  width: 250px;
-  border: 0;
+  @apply pl-2 pr-16 py-2 text-xl;
+  border-right: 12px solid transparent;
 }
 .option {
-  padding: 2rem;
-  height: 60px;
-  span {
-    font-size: 160px;
-  }
+  @apply border-none;
 }
