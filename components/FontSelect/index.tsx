@@ -11,7 +11,7 @@ const FontSelect = ({
     <>
       <select className={styles.font_select} onChange={onChange}>
         {fonts.map((font: any, id) => (
-          <option key={id}>
+          <option className={styles.option} key={id}>
             <span>{font}</span>
           </option>
         ))}

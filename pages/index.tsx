@@ -1,16 +1,27 @@
 import Head from "next/head";
-import { Inter, Montserrat } from "@next/font/google";
+import { Inter, Montserrat, Asar } from "@next/font/google";
 import styles from "@/styles/Home.module.scss";
 import FontSelect from "@/components/FontSelect";
 import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ weight: "600", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
-
-const fonts = ["Inter", "Montserrat"];
+const asar = Asar({ weight: "400", subsets: ["latin"] });
+const fonts = ["Inter", "Montserrat", "Asar"];
 
 export default function Home() {
   const [selectedFont, setSelectedFont] = React.useState("Inter");
+  const [font, setFont] = React.useState(inter);
+
+  React.useEffect(() => {
+    if (selectedFont === "Inter") {
+      setFont(inter);
+    } else if (selectedFont === "Montserrat") {
+      setFont(montserrat);
+    } else if (selectedFont === "Asar") {
+      setFont(asar);
+    }
+  }, [selectedFont]);
 
   const handleSelect = React.useCallback(
     (e: { target: { value: React.SetStateAction<string> } }) => {
@@ -37,10 +48,18 @@ export default function Home() {
         />
         <div className={styles.container}>
           <div className={styles.font_wrapper}>
-            <h2 className={montserrat.className}>Ledbim {selectedFont} 600</h2>
-            <h3 className={montserrat.className}>Ledbim {selectedFont} 600</h3>
-            <h4 className={montserrat.className}>Ledbim {selectedFont} 600</h4>
-            <h5 className={montserrat.className}>Ledbim {selectedFont} 600</h5>
+            <h2 className={font.className}>
+              Ledbim {selectedFont} {font.style.fontWeight}
+            </h2>
+            <h3 className={font.className}>
+              Ledbim {selectedFont} {font.style.fontWeight}
+            </h3>
+            <h4 className={font.className}>
+              Ledbim {selectedFont} {font.style.fontWeight}
+            </h4>
+            <h5 className={font.className}>
+              Ledbim {selectedFont} {font.style.fontWeight}
+            </h5>
           </div>
         </div>
       </main>
