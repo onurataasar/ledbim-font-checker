@@ -6,7 +6,8 @@
   gap: 2rem;
   min-height: 100vh;
   h1 {
-    @apply text-2xl text-purple-800;
+    @apply text-3xl  uppercase text-purple-800 font-semibold;
+    filter: drop-shadow(5px 4px 6px #4444ddb9);
   }
   .input_container {
     @apply flex gap-4;
@@ -29,15 +30,18 @@
     justify-content: center;
     align-items: center;
     h2 {
-      @apply text-3xl;
+      @apply text-4xl;
     }
     h3 {
-      @apply text-xl;
+      @apply text-2xl;
     }
     h4 {
-      @apply text-base;
+      @apply text-xl;
     }
     h5 {
+      @apply text-base;
+    }
+    h6 {
       @apply text-sm;
     }
   }

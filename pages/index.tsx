@@ -57,6 +57,7 @@ export default function Home() {
             <h3 className={font.className}>{text}</h3>
             <h4 className={font.className}>{text}</h4>
             <h5 className={font.className}>{text}</h5>
+            <h6 className={font.className}>{text}</h6>
           </div>
         </div>
       </main>
