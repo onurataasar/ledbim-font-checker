@@ -4,11 +4,21 @@ import styles from "@/styles/Home.module.scss";
 import FontSelect from "@/components/FontSelect";
 import React from "react";
 import TextInput from "@/components/TextInput";
+import localFont from "@next/font/local";
 
 const inter = Inter({ weight: "600", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 const asar = Asar({ weight: "400", subsets: ["latin"] });
-const fonts = ["Montserrat", "Inter", "Asar"];
+const quantify = localFont({
+  src: [
+    {
+      path: "../fonts/Quantify.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-quantify",
+});
+const fonts = ["Montserrat", "Inter", "Asar", "Quantify"];
 
 export default function Home() {
   const [selectedFont, setSelectedFont] = React.useState("Montserrat");
@@ -21,6 +31,8 @@ export default function Home() {
       setFont(montserrat);
     } else if (selectedFont === "Asar") {
       setFont(asar);
+    } else if (selectedFont === "Quantify") {
+      setFont(quantify);
     }
   }, [selectedFont]);
 
