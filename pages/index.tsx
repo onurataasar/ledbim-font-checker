@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Inter, Montserrat, Asar } from "@next/font/google";
+import { Inter, Montserrat, Asar, Alata } from "@next/font/google";
 import styles from "@/styles/Home.module.scss";
 import FontSelect from "@/components/FontSelect";
 import React from "react";
@@ -9,6 +9,7 @@ import localFont from "@next/font/local";
 const inter = Inter({ weight: "600", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 const asar = Asar({ weight: "400", subsets: ["latin"] });
+const alata = Alata({ weight: "400", subsets: ["latin"] });
 const quantify = localFont({
   src: [
     {
@@ -18,7 +19,7 @@ const quantify = localFont({
   ],
   variable: "--font-quantify",
 });
-const fonts = ["Montserrat", "Inter", "Asar", "Quantify"];
+const fonts = ["Montserrat", "Inter", "Asar", "Quantify", "Alata"];
 
 export default function Home() {
   const [selectedFont, setSelectedFont] = React.useState("Montserrat");
@@ -33,6 +34,8 @@ export default function Home() {
       setFont(asar);
     } else if (selectedFont === "Quantify") {
       setFont(quantify);
+    } else if (selectedFont === "Alata") {
+      setFont(alata);
     }
   }, [selectedFont]);
 
