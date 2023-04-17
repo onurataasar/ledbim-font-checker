@@ -6,10 +6,26 @@ import React from "react";
 import TextInput from "@/components/TextInput";
 import localFont from "@next/font/local";
 
-const inter = Inter({ weight: "600", subsets: ["latin"] });
-const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
-const asar = Asar({ weight: "400", subsets: ["latin"] });
-const alata = Alata({ weight: "400", subsets: ["latin"] });
+const inter = Inter({
+  weight: "600",
+  subsets: ["latin", "latin-ext", "latin-ext"],
+  display: "swap",
+});
+const montserrat = Montserrat({
+  weight: "600",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+const asar = Asar({
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+const alata = Alata({
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
 const quantify = localFont({
   src: [
     {
